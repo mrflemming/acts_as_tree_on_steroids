@@ -31,7 +31,7 @@ module Fortytwo #:nodoc:
           include Fortytwo::Acts::TreeOnSteroids::InstanceMethods
           extend Fortytwo::Acts::TreeOnSteroids::SingletonMethods
 
-          after_create :force_save_after_update
+          after_create :force_save_after_create
           before_update :force_calculate_id_path_and_fields_before_update
           after_update  :force_propagate_changes_after_update
 

@@ -128,6 +128,7 @@ module Fortytwo #:nodoc:
 	# the root element is considered the first element in the generation
 	# if reload is true the ancestor path will be reloaded first
         def root(reload=false)
+          return self if is_root?
           ancestors(reload).first
         end
 
